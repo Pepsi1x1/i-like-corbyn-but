@@ -1,10 +1,48 @@
+function displayAnyMessagesForState(state, override) {
+	if (messages[state]) {
+		// any messages with deadlines within 2 days from now?
+		messages[state].forEach(function (message) {
+			if ((Date.now() < message.deadline.getTime() && Date.now() > message.startTime.getTime()) || override) {
+				$("#message-state").text(state);
+				$("#message-custom-text").html(message.text);
+
+				$("#message-custom-text a").click(function() {
+					ga('send', 'event', 'Message Outbound', 'click', state + ":" + $(this).attr("href"));
+					return true;
+				});
+
+				$("#message").show();
+				$("#gray-screen").show();
+				
+				ga('send', 'event', 'Message', 'show', state);
+			}
+		});
+	}
+}
+
 $(document).ready(function() {
 	faq.forEach(function(entry, index) {
 		generateEntry(entry, index);
 	});
+
 	var followScroll = true;
+	var ipInfoApiKey = "9e5d5cef52a748a4342915d7f9e6517c60e2eca0baf5f111ff9eaef78ae358fe";
+
+	$.getJSON("https://api.ipify.org?format=json", function(data) {
+		var ipLookup = "http://api.ipinfodb.com/v3/ip-city/?key=" + ipInfoApiKey + "&ip=" + data.ip + "&format=json"
+		$.getJSON(ipLookup, function(data) {
+			displayAnyMessagesForState(data.regionName);
+		});
+	});
+
+	$("#close-message").click(function() {
+		$("#message").fadeOut(200);
+		$("#gray-screen").fadeOut(200);
+	});
+
 	$(".toc-entry").click(function() {
 		var index = this.id.match(/toc-entry-(.*)/);
+
 		if (index) {
 			$('html, body').animate({
 				scrollTop: $("#entry-" + index[1]).offset().top - 20
@@ -23,6 +61,7 @@ $(document).ready(function() {
 			window.location.hash = "";
 		}
 	});
+
 	$(document).scroll(function() {
 		if (followScroll) {
 			for (var i = 0; i < faq.length; i++) {
@@ -32,47 +71,51 @@ $(document).ready(function() {
 				}
 			}
 		}
+
 		if ($(this).scrollTop() < $(".header").height()) {
 			$(".table-of-contents").css("top", $(".header").height() - $(this).scrollTop() + 20 + "px");
 		}
 		else if ($(".table-of-contents").css("top") !== "20px") {
 			$(".table-of-contents").css("top", "20px");
 		}
+
 		if ($(this).scrollTop() > $(".footer").position().top - $(window).height() + 110) {
 			$(".share-controls").css({
-					position: "static"
-				}).addClass('display-inline');
+					bottom: $(window).height() + $(this).scrollTop() - $(".footer").position().top - 90 + "px",
+					right: $(window).width()/2 - $(".share-controls").width()/2 + "px",
+					zIndex: 1
+				})
+				.addClass('display-inline');
 			$(".table-of-contents").css("left", 10 - $(".table-of-contents").width() + "px");
+
 		}
-		else
-		{
-			 if ($(".share-controls").hasClass("display-inline")) {
-			 if($(window).width() >= 1024)
-				{
-				$(".share-controls").css({
-						position:"fixed", 
-						bottom: "20px",   
-						right: "20px",
-						zIndex: 0
-					}).removeClass('display-inline');
-				}
+		else if ($(".share-controls").css("bottom") !== "20px") {
+			$(".share-controls").css({
+					bottom: "20px",
+					right: "20px",
+					zIndex: 0
+				})
+				.removeClass('display-inline');
 			$(".table-of-contents").css("left", 0);
-			}
 		}
 	});
+
 	$(".created-by").click(function() {
-		//ga('send', 'event', 'Outbound', 'click', "http://www.codersforcorbyn.com");
-		window.open("http://www.codersforcorbyn.com", "_blank");
+		ga('send', 'event', 'Outbound', 'click', "https://github.com/jacobnisnevich/i-like-bernie-but");
+		window.open("https://github.com/jacobnisnevich/i-like-bernie-but", "_blank");
 	});
+
 	$(".convinced-button").click(function() {
 		//ga('send', 'event', 'Convinced', 'click', "http://www.jeremyforlabour.com/volunteer");
 		window.open("http://www.jeremyforlabour.com/volunteer", "_blank");
 	});
+
 	$("a").click(function() {
-		//ga('send', 'event', 'Outbound', 'click', $(this).attr("href"));
+		ga('send', 'event', 'Outbound', 'click', $(this).attr("href"));
 		return true;
 	});
 });
+
 if (window.location.hash) {
 	// Scroll to pre-selected question
 	setTimeout(function(){
@@ -80,6 +123,7 @@ if (window.location.hash) {
 		$("div[data-question=" + entryClass + "]").click();
 	}, 300);
 };
+
 var generateEntry = function(entry, index) {
 	$(".faq").append("<div class='entry clearfix' id='entry-" + index + "'>\
 		<div class='question-container'>\
