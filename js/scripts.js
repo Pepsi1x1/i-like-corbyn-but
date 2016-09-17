@@ -18,6 +18,15 @@ $(document).ready(function() {
 				}).addClass('display-inline');
 			$(".table-of-contents").css("left", 10 - $(".table-of-contents").width() + "px");
 			}
+		else
+			{
+			$(".share-controls").css({
+					position:"fixed", 
+					bottom: "20px",   
+					right: "20px",
+					zIndex: 0
+				}).removeClass('display-inline');
+			}
 		});
 	faq.forEach(function(entry, index) {
 		generateEntry(entry, index);
