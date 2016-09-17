@@ -9,8 +9,7 @@ $(document).ready(function() {
 			}).removeClass('display-inline');
 		}
 	$(window).resize(function()
-		{
-		alert(1);
+		{		
 		if($(window).width() < 1024)
 			{
 			$(".share-controls").css({
