@@ -118,7 +118,7 @@ body {
 	position: relative;
 	display: inline-block;
 	padding: 20px;
-	background-color: #27415b;
+	background-color: #da2c2c;
 	color: #f4f6f6; /* rgb(255, 255, 255); */
 	box-shadow: 0 0 10px 0 rgba(0,0,0,.25);
 	border-radius: 5px;
@@ -131,7 +131,7 @@ body {
 	left: 50px;
 	border-width: 0 15px 15px;
 	border-style: solid;
-	border-color: #27415b transparent;
+	border-color: #da2c2c transparent;
 	display: block;
 	width: 0;
 }
@@ -146,14 +146,14 @@ body {
 	position: relative;
 	display: inline-block;
 	padding: 20px;
-	/* background-color: #f5f5f5; */
-	background-color: #f5f5f5; 
+	/* background-color: #9A0201; */
+	background-color:#da2c2c; 
 	
 	
-	color: 2B2B2B; /* rgb(255, 255, 255); */
+	color:#f4f6f6; /* rgb(255, 255, 255); */
 	box-shadow: 0 0 10px 0 rgba(0,0,0,.25);
-	border:#f5f5f5 solid thin;
-	border-radius: 10px;
+	border:#da2c2c solid thin;
+	border-radius: 5px;
 }
 
 .answer:after {
@@ -163,7 +163,7 @@ body {
 	right: 50px;
 	border-width: 15px 15px 0;
 	border-style: solid;
-	border-color: #f9f9f9 transparent;
+	border-color: #da2c2c transparent;
 	display: block;
 	width: 0;
 }
@@ -239,32 +239,30 @@ body {
 }
 
 .share-controls {
-	margin-left:auto;
-	margin-right:auto;
 	width: 100%;
 	max-width: 200px;
-	/* position: fixed; */
+	position: fixed;
 	bottom: 20px;
 	right: 20px;
 	text-align: center;
-	z-index: 0; */
+	z-index: 0;
 }
 
 .share-controls img {
 	width: 48px;
 	border-radius: 50%;
-	padding: 0; 
+	padding: 0;
 }
 
 .share-controls img:hover {
 	background-color: rgb(8, 126, 215);
-	background-size: 50%, 25%, 25%; 
+	background-size: 50%, 25%, 25%;
 }
 
 .footer {
 	width: 100%;
-	height: 290px;
-	padding: 120px 50px 50px 50px;
+	height: 275px;
+	padding: 50px 50px 50px 50px;
 	background-color: #D3272E;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,.25);
 	box-sizing: border-box;
@@ -284,12 +282,9 @@ body {
 
 .not-the-billionaires {
 	margin: 10px auto;
-	width: 275px;
-	/* height: 35.25px; */
-	 height: 95px; 
-	/* background-image: url("../img/billionaires_white.svg"); */
+	width: 300px;
+	height: 105px;
 	background-image: url("../img/peoplepowered.png");
-	/*background-image: url("../img/peoplepowered.svg"); */
 	background-size: 100%;
 }
 
@@ -311,7 +306,7 @@ body {
 }
 
 a {
-	color: black;
+	color: white;
 }
 
 a:hover {
@@ -319,11 +314,7 @@ a:hover {
 }
 
 .display-inline {
-	/*text-align:center;
-	position: fixed;
-	display: block !important;	
-	width:100% !important;
-	bottom:20px !important; */
+	display: inline !important;
 }
 
 #bernrate {
@@ -358,98 +349,9 @@ a:hover {
 	}
 
 	.share-controls {
-		/* display: none; */
-	}
-
-	.created-by {
-		text-align: center;
-		width: 90%;
-		padding: 10px;
-	}
-
-	#message {
-    position: inherit;
-    width: 100%;
-    margin: 0;
-    left: 0;
-    top: 0;
-		background-color: #FEEFB3;
-		color: #9F6000;
-	}
-
-	#message-text {
-		padding: 12px;
-		font-size: 18px;
-		color: inherit;
-	}
-
-	#message-text a {
-		color: inherit;
-	}
-
-	#message .small {
-		font-size: 0.8em;
-	}
-
-	#close-message {
-		font-size: 60px;
-		margin-top: 10px;
-		margin-right: 10px;
-		color: inherit;
-	}
-
-	#gray-screen {
-		display: none !important;
-	}
-}
-
-@media (max-width: 360px) {
-
-	.header {
-		height: 160px;
-	}
-
-	.header-text {
-		padding: 10px;
-	}
-
-	.container {
-		margin: 5px;
-	}
-
-	.table-of-contents {
 		display: none;
 	}
 
-	.question-container, .answer-container {
-		padding-right:1em;
-		margin-right:1em;
-		max-width: 75%;
-	}
-
-	.share-controls {
-		/* display: none; */
-		/* width: 100%; */
-		max-width: 200px;
-		/*position: fixed;
-		bottom: 50px;
-		right: 50px;
-		text-align: center;
-		z-index: 0; */
-		}
-
-
-	.share-controls img {
-		width: 48px;
-		border-radius: 50%;
-		padding: 0; 
-	}
-
-	.share-controls img:hover {
-		background-color: rgb(8, 126, 215);
-		background-size: 50%, 25%, 25%;
-	}
-		
 	.created-by {
 		text-align: center;
 		width: 90%;
