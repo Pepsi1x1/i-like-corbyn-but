@@ -2,30 +2,17 @@ var faq = [{
     "id": "what-about-socialism",
     "question": "... isn't he a socialist?",
     "answer": 
-<<<<<<< HEAD
         "Jeremy Corbyn is a <i>democratic socialist</i>. He believes that our current economic system isn't doing enough for the poor and working class in our society and that democratic change is needed to create a fairer and more just society.<br><br>" + 
-=======
-        "Jeremy Corbyn is a <i>democratic socialist</i>. He believes that our current economic system isn't doing enough for the poor and working class in our society and that democratic change is needed to create a fairer and more just society.<br><br>" + 
->>>>>>> refs/heads/pr/27
         "But this isn't radical or scary. Many of the programs instituted by post war governments that we take for granted today &mdash; such as the NHS, the limited hours of work, the minimum wage, and Social Security &mdash; are socialist programs."
 },{
     "id": "wouldn%27t-he-increase-taxes",
     "question": "... I heard he wants to increase taxes!",
-<<<<<<< HEAD
    "answer": "Most people will be better off under Corbyn's tax plan and Jeremy will make sure that the richest in our society that avoid tax will contribute their fair share like the rest of us." +
 		"These are the proposals: " + 
 		"<ul><li>Reverse the cuts to Corporation Tax.</li>" +
 		"<li>Reverse cuts to Inheritance Tax</li>" +		
 		"<li>Introduce a <a href=\"https://en.wikipedia.org/wiki/Land_value_tax\" target=\"_blank\">land value tax</a></li>" +
 		"<li>Increase the top rate of tax to 50p from the current rate 45p.  This rate is only paid on income over the &pound;150,000 threshold. Ed Miliband was hoping to introduce this last year had Labour won in 2015 - and 83% of members polled agreed that this was the correct policy.</li></ul>" +
-=======
-   "answer": "Most people will be better off under Corbyn's tax plan and Jeremy will make sure that the richest in our society that avoid tax will contribute their fair share like the rest of us." +
-		"These are the proposals: " + 
-		"<ul><li>Reverse the cuts to Corporation Tax.</li>" +
-		"<li>Reverse cuts to Inheritance Tax</li>" +		
-		"<li>Introduce a <a href=\"https://en.wikipedia.org/wiki/Land_value_tax\" target=\"_blank\">land value tax</a></li>" +
-		"<li>Increase the top rate of tax to 50p from the current rate 45p.  This rate is only paid on income over the &pound;150,000 threshold. Ed Miliband was hoping to introduce this last year had Labour won in 2015 - and 83% of members polled agreed that this was the correct policy.</li></ul>" +
->>>>>>> refs/heads/pr/27
 		"<p>Crucially - Jeremy has said he would intervene to enforce laws on British overseas territories and dependencies if they do not comply with UK tax law, introduce anti-avoidance measures into UK law, and invest in HMRC so they can hire the staff needed to collect the tax the country badly needs.</p>"
 },{
     "id": "is-he-electable",
@@ -62,11 +49,7 @@ var faq = [{
 },{
 	"id":"military-and-national-security",
 	"question":"...his attitudes about defence worry me", 
-<<<<<<< HEAD
 	"answer":"Corbyn takes the security and defence of the UK seriously, but his approach to security is significantly different from many other leaders - emphasising security not only for us in the UK, but for our troops in foreign countries. He sees conflict as a last resort. <p>From the Defence Policy Review 2016: \"The safety and security of the British people must always be our first priority. This can only be achieved by a defence and security policy which is strategic, informed by expert opinion and supported by a strong evidence base.\"</p><p>It is Labour policy to continue to spend 2% of GDP on defence.</p>" +
-=======
-	"answer":"Corbyn takes the security and defence of the UK seriously, but his approach to security is significantly different from many other leaders - emphasising security not only for us in the UK, but for our troops in foreign countries. He sees conflict as a last resort. <p>From the Defence Policy Review 2016: \"The safety and security of the British people must always be our first priority. This can only be achieved by a defence and security policy which is strategic, informed by expert opinion and supported by a strong evidence base.\"</p><p>It is Labour policy to continue to spend 2% of GDP on defence.</p>" +
->>>>>>> refs/heads/pr/27
 	"On Trident: Jeremy believes that the £167 Billion cost is better spent in other areas of defence, and he believes that the UK has a duty to join others in getting rid of weapons that can never be used or would destroy our planet. As a Trade Unionist, as Prime Minister Jeremy would ensure that the skilled scientists and engineers currently building weapons will be given new roles building the technology of the future.</a>"
 	
 },{
@@ -79,8 +62,4 @@ var faq = [{
     "answer": 
         "<a href='http://www.jeremyforlabour.com/pledges'>Read Jeremy's 10 policy pledges</a>."
         
-<<<<<<< HEAD
 }];
-=======
-}];
->>>>>>> refs/heads/pr/27
