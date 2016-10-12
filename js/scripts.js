@@ -91,11 +91,11 @@ $(document).ready(function() {
 	});
 	$(".created-by").click(function() {
 		//ga('send', 'event', 'Outbound', 'click', "http://www.codersforcorbyn.com");
-		window.open("http://www.codersforcorbyn.com", "_blank");
+		window.open("http://www.codersforlabour.com", "_blank");
 	});
 	$(".convinced-button").click(function() {
 		//ga('send', 'event', 'Convinced', 'click', "http://www.jeremyforlabour.com/volunteer");
-		window.open("http://www.jeremyforlabour.com/volunteer", "_blank");
+		window.open("https://join.labour.org.uk", "_blank");
 	});
 	$("a").click(function() {
 		//ga('send', 'event', 'Outbound', 'click', $(this).attr("href"));
