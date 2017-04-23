@@ -55,7 +55,7 @@ var faq = [{
 },{
     "id": "how-old-is-he-again",
     "question": "... he's too old!",
-    "answer": "At 71, Jeremy Corbyn would be the oldest Prime Minister ever elected to a first term. He is now a fit and healthy 67 year old. Angela Eagle said of him during the EU Referendum that he was pursuing an agenda that would make a 25-year-old tired. He has demonstrated remarkable stamina during the current leadership campaign and is supported by strong cabinet team of experienced politicians and campaigners."
+    "answer": "At 68, there have been a number of other Prime Ministers elected for their first term who were older than Jeremy Corbyn. He is now a fit and healthy 67 year old. Angela Eagle said of him during the EU Referendum that he was pursuing an agenda that would make a 25-year-old tired. He demonstrated remarkable stamina during the leadership campaign and has been described as energised at the start of this General Election campaign where he is supported by strong cabinet team of experienced politicians and campaigners."
 }, {
     "id": "I-am-still-unsure",
     "question": "Hmm, these are some good points, but I'm still unconvinced. Where can I learn more?",
